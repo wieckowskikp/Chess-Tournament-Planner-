@@ -109,7 +109,7 @@ System wykorzystuje klasyczny algorytm ELO do aktualizacji rankingów graczy:
 3. Możliwość konfiguracji współczynnika K dla różnych poziomów rankingowych
 
 ## Struktóra folderów i plików
-
+```
 chess-tournament-planner/
 │
 ├── src/
@@ -212,6 +212,7 @@ chess-tournament-planner/
 │                   └── repository/
 ├── pom.xml
 └── README.md
+```
 
 ## Uruchomienie aplikacji
 
