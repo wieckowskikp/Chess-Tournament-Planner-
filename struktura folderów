@@ -1,0 +1,121 @@
+chess-tournament-planner/
+├── .gitignore
+├── pom.xml
+├── README.md
+├── LICENSE
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── chesstournament/
+│   │   │           ├── ChessTournamentPlannerApplication.java
+│   │   │           ├── config/
+│   │   │           │   ├── SecurityConfig.java
+│   │   │           │   ├── SwaggerConfig.java
+│   │   │           │   └── WebConfig.java
+│   │   │           ├── controller/
+│   │   │           │   ├── AuthController.java
+│   │   │           │   ├── UserController.java
+│   │   │           │   ├── PlayerController.java
+│   │   │           │   ├── TournamentController.java
+│   │   │           │   ├── RoundController.java
+│   │   │           │   └── MatchController.java
+│   │   │           ├── dto/
+│   │   │           │   ├── request/
+│   │   │           │   │   ├── LoginRequest.java
+│   │   │           │   │   ├── RegisterRequest.java
+│   │   │           │   │   ├── UserUpdateRequest.java
+│   │   │           │   │   ├── TournamentCreateRequest.java
+│   │   │           │   │   ├── TournamentUpdateRequest.java
+│   │   │           │   │   ├── MatchResultRequest.java
+│   │   │           │   │   └── PlayerEloUpdateRequest.java
+│   │   │           │   └── response/
+│   │   │           │       ├── JwtResponse.java
+│   │   │           │       ├── UserResponse.java
+│   │   │           │       ├── PlayerResponse.java
+│   │   │           │       ├── TournamentResponse.java
+│   │   │           │       ├── RoundResponse.java
+│   │   │           │       ├── MatchResponse.java
+│   │   │           │       ├── StandingsResponse.java
+│   │   │           │       └── PlayerStatsResponse.java
+│   │   │           ├── exception/
+│   │   │           │   ├── GlobalExceptionHandler.java
+│   │   │           │   ├── ResourceNotFoundException.java
+│   │   │           │   ├── UserAlreadyExistsException.java
+│   │   │           │   └── AccessDeniedException.java
+│   │   │           ├── model/
+│   │   │           │   ├── User.java
+│   │   │           │   ├── Role.java
+│   │   │           │   ├── Player.java
+│   │   │           │   ├── Tournament.java
+│   │   │           │   ├── Round.java
+│   │   │           │   ├── Match.java
+│   │   │           │   └── enums/
+│   │   │           │       ├── RoleType.java
+│   │   │           │       ├── TournamentStatus.java
+│   │   │           │       └── MatchResult.java
+│   │   │           ├── repository/
+│   │   │           │   ├── UserRepository.java
+│   │   │           │   ├── RoleRepository.java
+│   │   │           │   ├── PlayerRepository.java
+│   │   │           │   ├── TournamentRepository.java
+│   │   │           │   ├── RoundRepository.java
+│   │   │           │   └── MatchRepository.java
+│   │   │           ├── security/
+│   │   │           │   ├── JwtTokenProvider.java
+│   │   │           │   ├── JwtAuthenticationFilter.java
+│   │   │           │   ├── UserDetailsServiceImpl.java
+│   │   │           │   └── JwtAuthenticationEntryPoint.java
+│   │   │           ├── service/
+│   │   │           │   ├── AuthService.java
+│   │   │           │   ├── UserService.java
+│   │   │           │   ├── PlayerService.java
+│   │   │           │   ├── TournamentService.java
+│   │   │           │   ├── RoundService.java
+│   │   │           │   ├── MatchService.java
+│   │   │           │   ├── EloService.java
+│   │   │           │   ├── PairingService.java
+│   │   │           │   └── StatsService.java
+│   │   │           └── util/
+│   │   │               ├── EloCalculator.java
+│   │   │               ├── SwissPairingEngine.java
+│   │   │               ├── TieBreakCalculator.java
+│   │   │               └── ValidationUtils.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── application-dev.properties
+│   │       ├── application-prod.properties
+│   │       └── db/
+│   │           └── migration/
+│   │               ├── V1__init_schema.sql
+│   │               ├── V2__add_roles.sql
+│   │               └── V3__add_admin_user.sql
+│   └── test/
+│       ├── java/
+│       │   └── com/
+│       │       └── chesstournament/
+│       │           ├── controller/
+│       │           │   ├── AuthControllerTest.java
+│       │           │   ├── UserControllerTest.java
+│       │           │   ├── PlayerControllerTest.java
+│       │           │   ├── TournamentControllerTest.java
+│       │           │   ├── RoundControllerTest.java
+│       │           │   └── MatchControllerTest.java
+│       │           ├── service/
+│       │           │   ├── AuthServiceTest.java
+│       │           │   ├── UserServiceTest.java
+│       │           │   ├── PlayerServiceTest.java
+│       │           │   ├── TournamentServiceTest.java
+│       │           │   ├── RoundServiceTest.java
+│       │           │   ├── MatchServiceTest.java
+│       │           │   ├── EloServiceTest.java
+│       │           │   └── PairingServiceTest.java
+│       │           └── util/
+│       │               ├── EloCalculatorTest.java
+│       │               ├── SwissPairingEngineTest.java
+│       │               └── TieBreakCalculatorTest.java
+│       └── resources/
+│           └── application-test.properties
+└── docker/
+    ├── Dockerfile
+    └── docker-compose.yml
